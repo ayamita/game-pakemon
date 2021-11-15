@@ -1,10 +1,15 @@
-import 'src/app.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:get/get.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   //permite ejecutar la clase
-  runApp(new MyApp());
+  runApp(GetMaterialApp(
+    debugShowCheckedModeBanner: false,
+    initialRoute: 'home',
+    navigatorKey: Get.key,
+    getPages: routes(),
+  ));
 }
-
-//scaffold class permite agregar el diseño a la app
-
