@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "9373712546",
+    "project_id": "pokemon-bf86a",
+    "storage_bucket": "pokemon-bf86a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9373712546:android:8466aae32a4f24fe9f97fb",
+        "android_client_info": {
+          "package_name": "com.example.pokemon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9373712546-at9h780v6n73aqij8j16gham8tg7kjgh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pokemon",
+            "certificate_hash": "8bfa1a61bb4bbb015bc128c31b83f5167219abe0"
+          }
+        },
+        {
+          "client_id": "9373712546-ji4916tukbg160tq9ati0o4lhjc9bb1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0OhCMlrOB0PoU0JchKVjP-tCudUcmrDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9373712546-ji4916tukbg160tq9ati0o4lhjc9bb1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
