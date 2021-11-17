@@ -6,7 +6,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 class LoginRegisterController extends GetxController {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  final formKey = GlobalKey<FormState>();
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
