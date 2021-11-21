@@ -1,7 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pokemon/Controllers/login_controller.dart';
+import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class FoodPage extends StatefulWidget {
   @override
@@ -51,7 +54,9 @@ class _FoodPageState extends State<FoodPage> {
                   minWidth: 340,
                   shape: RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(12)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed("/pokedex");
+                  },
                   child: Text(
                     "Jugar",
                     style: TextStyle(
