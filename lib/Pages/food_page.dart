@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,6 +16,7 @@ class _FoodPageState extends State<FoodPage> {
 
   @override
   Widget build(BuildContext context) {
+    var colorbutton = Colors.red[900];
     return (Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -41,7 +42,7 @@ class _FoodPageState extends State<FoodPage> {
               height: 50,
             ),
             Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Colors.black54,
@@ -53,24 +54,56 @@ class _FoodPageState extends State<FoodPage> {
                   height: 58,
                   minWidth: 340,
                   shape: RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(12)),
+                      borderRadius: BorderRadius.circular(12)),
                   onPressed: () {
-                    Get.toNamed("/pokedex");
+                    //Get.toNamed("/pokedex");
+                    int count = 1;
+                    Get.toNamed("/juego", arguments: {'count': count});
                   },
-                  child: Text(
+                  child: const Text(
                     "Jugar",
                     style: TextStyle(
                       fontSize: 24,
                       color: Colors.white,
                     ),
                   ),
-                  color: Color(0xFFB71C1C),
+                  color: colorbutton,
                 )),
             const SizedBox(
               height: 50,
             ),
             Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                        color: Colors.black54,
+                        blurRadius: 15.0,
+                        offset: Offset(0.0, 0.75))
+                  ],
+                ),
+                child: MaterialButton(
+                  height: 58,
+                  minWidth: 340,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12)),
+                  onPressed: () {
+                    Get.toNamed("/pokedex");
+                    //Get.toNamed("/juego");
+                  },
+                  child: const Text(
+                    "Pokedex",
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                    ),
+                  ),
+                  color: colorbutton,
+                )),
+            const SizedBox(
+              height: 50,
+            ),
+            Container(
+                decoration: const BoxDecoration(
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Colors.black54,
@@ -84,20 +117,20 @@ class _FoodPageState extends State<FoodPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(12)),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     "Calificar",
                     style: TextStyle(
                       fontSize: 24,
                       color: Colors.white,
                     ),
                   ),
-                  color: Color(0xFFB71C1C),
+                  color: colorbutton,
                 )),
             const SizedBox(
               height: 50,
             ),
             Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Colors.black54,
@@ -111,14 +144,14 @@ class _FoodPageState extends State<FoodPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(12)),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     "Comentarios",
                     style: TextStyle(
                       fontSize: 24,
                       color: Colors.white,
                     ),
                   ),
-                  color: Color(0xFFB71C1C),
+                  color: colorbutton,
                 )),
           ],
         )))));
