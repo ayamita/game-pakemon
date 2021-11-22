@@ -49,8 +49,10 @@ class _JuegoScreenState extends State<JuegoScreen> {
     var name;
     if (pokedex.length > 0) {
       img = pokedex[idRandom]['img'];
+      name = pokedex[idRandom]['name'];
     } else {
       img = "https://webstockreview.net/images/dot-clipart-bullet-point-9.png";
+      name = "Pokemón";
     }
     //print(pokedex[75]['name']);
     return Scaffold(
@@ -75,12 +77,12 @@ class _JuegoScreenState extends State<JuegoScreen> {
                         topRight: Radius.circular(20)),
                     color: Colors.white)),
           ),
-          Positioned(
+          const Positioned(
               top: 70,
               right: 20,
               child: Text(
-                "¿Quien es ese pokemón?",
-                style: const TextStyle(
+                "¿Quíen es ese pokemón?",
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 32,
@@ -95,7 +97,38 @@ class _JuegoScreenState extends State<JuegoScreen> {
               fit: BoxFit.fitHeight,
               color: Colors.black,
             ),
-          )
+          ),
+          Positioned(
+            top: (height * 0.50),
+            left: (width / 2) - 170,
+            child: Container(
+                decoration: const BoxDecoration(
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                        color: Colors.black54,
+                        blurRadius: 15.0,
+                        offset: Offset(0.0, 0.75))
+                  ],
+                ),
+                child: MaterialButton(
+                  height: 58,
+                  minWidth: 340,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12)),
+                  onPressed: () {
+                    //Get.toNamed("/pokedex");
+                    //Get.toNamed("/juego");
+                  },
+                  child: const Text(
+                    "Pokedex",
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                    ),
+                  ),
+                  color: Colors.redAccent,
+                )),
+          ),
 
           //Positioned(top: 100, child: Text()),
         ],
