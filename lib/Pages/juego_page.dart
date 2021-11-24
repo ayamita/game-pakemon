@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:html';
 import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
@@ -43,17 +44,66 @@ class _JuegoScreenState extends State<JuegoScreen> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     var numRandom = new Random();
-    int idRandom = numRandom.nextInt(151);
+
     int count = Get.arguments['count'];
-    var img;
-    var name;
+
+    int idRandom = numRandom.nextInt(152);
+    int idRandom2 = numRandom.nextInt(152);
+    int idRandom3 = numRandom.nextInt(152);
+    int idRandom4 = numRandom.nextInt(152);
+
+    var list = [idRandom, idRandom2, idRandom3, idRandom4];
+
+    var pokemon, pokemon2, pokemon3, pokemon4, img;
+
     if (pokedex.length > 0) {
       img = pokedex[idRandom]['img'];
-      name = pokedex[idRandom]['name'];
+      //pokemon = pokedex[idRandom]['name'];
+      print(img);
+      // print(pokemon);
+      print(list[0]);
+      print(list[1]);
+      print(list[2]);
+      print(list[3]);
+      int i = 0;
+      do {
+        int n = numRandom.nextInt(5);
+        int n2 = numRandom.nextInt(5);
+        int n3 = numRandom.nextInt(5);
+        int n4 = numRandom.nextInt(5);
+
+        var list2 = [n, n2, n3, n4];
+        print(list2);
+
+        if (pokemon == null && no == ruleta) {
+          pokemon = pokedex[list[i]]['name'];
+          print(pokemon);
+          i++;
+        } else {
+          if (pokemon2 == null && no == ruleta) {
+            pokemon2 = pokedex[list[i]]['name'];
+            print(pokemon2);
+            i++;
+          } else {
+            if (pokemon3 == null && no == ruleta) {
+              pokemon3 = pokedex[list[i]]['name'];
+              print(pokemon3);
+              i++;
+            } else {
+              if (pokemon4 == null && no == ruleta) {
+                pokemon4 = pokedex[list[i]]['name'];
+                print(pokemon4);
+                i++;
+              }
+            }
+          }
+        }
+      } while (i < 4);
     } else {
       img = "https://webstockreview.net/images/dot-clipart-bullet-point-9.png";
-      name = "Pokemón";
+      pokemon = "Pokemón";
     }
+
     //print(pokedex[75]['name']);
     return Scaffold(
       backgroundColor: Colors.redAccent,
