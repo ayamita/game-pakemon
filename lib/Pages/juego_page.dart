@@ -45,46 +45,51 @@ class _JuegoScreenState extends State<JuegoScreen> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     int count = Get.arguments['count'];
-
-    var numRandom = new Random();
+    //obtenemos los id's de 4 pokemones de forma randon de la API.
+    var numRandom = Random();
     int idRandom = numRandom.nextInt(151);
     int idRandom2 = numRandom.nextInt(151);
     int idRandom3 = numRandom.nextInt(151);
     int idRandom4 = numRandom.nextInt(151);
-
+    //Se agregan los valores de una lista para seleccionar despues.
     var pokeRandom = [idRandom3, idRandom, idRandom2, idRandom3, idRandom4];
-    print(pokeRandom);
-
-    var img, name, name2, name3, name4;
+    //Se creean las variables que ocuparan los botones.
+    var img = "", name = "", name2 = "", name3 = "", name4 = "", nameimg = "";
+    //Se crea una lista que pasa a un ciclo para acomodar de forma aleatorea los datos de la lista.
     var orden = [1, 2, 3, 4];
-
-    Random r = new Random();
+    Random r = Random();
     for (int i = orden.length; i > 0; i--) {
       int posicion = r.nextInt(i);
       int tmp = orden[i - 1];
       orden[i - 1] = orden[posicion];
       orden[posicion] = tmp;
     }
-    print(orden);
-
-    var imgRandom = new Random();
+    //Se crea otra variable randon para que la imagen igual sea idependiente.
+    var imgRandom = Random();
     int ordenimg = imgRandom.nextInt(3);
-
-    if (pokedex.length > 0) {
+    //Se valida que la api haya devuelto información en este caso un pokemon
+    if (pokedex.isNotEmpty) {
+      //Se obtiene el pokemon randon que se muestra en la imagen.
       img = pokedex[pokeRandom[ordenimg]]['img'];
+      nameimg = pokedex[pokeRandom[ordenimg]]['name'];
+      //Se obtienen los nombres de los pokemones que iran en los botones.
       name = pokedex[pokeRandom[orden[0]]]['name'];
       name2 = pokedex[pokeRandom[orden[1]]]['name'];
       name3 = pokedex[pokeRandom[orden[2]]]['name'];
       name4 = pokedex[pokeRandom[orden[3]]]['name'];
-      print(img);
+      print(pokeRandom);
+      print(orden);
+      print(img + "    " + nameimg);
     } else {
+      /*Cuando inicializa el proyecto no obtiene valores de las variables por lo que se les asigna uno temporalmente, 
+      ya que posteriormente se les asignan valores.*/
       img = "https://webstockreview.net/images/dot-clipart-bullet-point-9.png";
       name = "Pokemón";
       name2 = "Pokemón";
       name3 = "Pokemón";
       name4 = "Pokemón";
     }
-    //print(pokedex[75]['name']);
+
     return Scaffold(
       backgroundColor: Colors.redAccent,
       body: Stack(
