@@ -52,7 +52,7 @@ class _JuegoScreenState extends State<JuegoScreen> {
     int idRandom3 = numRandom.nextInt(152);
     int idRandom4 = numRandom.nextInt(152);
 
-    var list = [idRandom, idRandom2, idRandom3, idRandom4];
+    var list = [0, idRandom, idRandom2, idRandom3, idRandom4];
 
     var pokemon, pokemon2, pokemon3, pokemon4, img;
 
@@ -67,30 +67,49 @@ class _JuegoScreenState extends State<JuegoScreen> {
       print(list[3]);
       int i = 0;
       do {
-        int n = numRandom.nextInt(5);
-        int n2 = numRandom.nextInt(5);
-        int n3 = numRandom.nextInt(5);
-        int n4 = numRandom.nextInt(5);
-
-        var list2 = [n, n2, n3, n4];
+        int ruleta = numRandom.nextInt(5);
+        int no = numRandom.nextInt(5);
+        int? no2, no3, no4;
+        var list2 = [0, 1, 2, 3, 4];
         print(list2);
 
-        if (pokemon == null && no == ruleta) {
+        if (pokemon == null && no > 0 && no == list2[ruleta]) {
           pokemon = pokedex[list[i]]['name'];
           print(pokemon);
           i++;
+          no2 = no;
         } else {
-          if (pokemon2 == null && no == ruleta) {
+          if (pokemon2 == null &&
+              no > 0 &&
+              no2 != null &&
+              no != no2 &&
+              no == list2[ruleta]) {
             pokemon2 = pokedex[list[i]]['name'];
             print(pokemon2);
+            no3 = no;
             i++;
           } else {
-            if (pokemon3 == null && no == ruleta) {
+            if (pokemon3 == null &&
+                no > 0 &&
+                no2 != null &&
+                no != no2 &&
+                no3 != null &&
+                no != no3 &&
+                no == list2[ruleta]) {
               pokemon3 = pokedex[list[i]]['name'];
               print(pokemon3);
               i++;
+              no4 = no;
             } else {
-              if (pokemon4 == null && no == ruleta) {
+              if (pokemon4 == null &&
+                  no > 0 &&
+                  no2 != null &&
+                  no != no2 &&
+                  no3 != null &&
+                  no != no3 &&
+                  no4 != null &&
+                  no != no4 &&
+                  no == list2[ruleta]) {
                 pokemon4 = pokedex[list[i]]['name'];
                 print(pokemon4);
                 i++;
