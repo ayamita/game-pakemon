@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\AYAM\\Documents\\Flutter\\Mirian\\pokemon\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\IGNITER\\.gradle\\caches\\transforms-2\\files-2.1\\19d49f5bdcec968e6617d049a1b60db6\\jetified-play-services-auth-16.0.1\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "D:\\AYAM\\Documents\\Flutter\\Mirian\\pokemon\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\IGNITER\\.gradle\\caches\\transforms-2\\files-2.1\\19d49f5bdcec968e6617d049a1b60db6\\jetified-play-services-auth-16.0.1\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "D:\\AYAM\\Documents\\Flutter\\Mirian\\pokemon\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\IGNITER\\.gradle\\caches\\transforms-2\\files-2.1\\19d49f5bdcec968e6617d049a1b60db6\\jetified-play-services-auth-16.0.1\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    }
+]

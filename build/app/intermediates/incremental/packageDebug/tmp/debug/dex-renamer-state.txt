@@ -1,0 +1,4 @@
+#Sun Nov 28 01:05:50 CST 2021
+base.0=D\:\\AYAM\\Documents\\Flutter\\Mirian\\pokemon\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
