@@ -14,7 +14,7 @@ class _HomPageState extends State<HomPage> {
         extendBodyBehindAppBar: true,
         backgroundColor: Color(0xFFB71C1C),
         body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
               colors: [
                 Color(0xFFF44336),
