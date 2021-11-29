@@ -34,7 +34,6 @@ class _JuegoScreenState extends State<JuegoScreen> {
       body: FutureBuilder(
         future: getPokemones(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          print(snapshot.connectionState);
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else {
@@ -42,6 +41,7 @@ class _JuegoScreenState extends State<JuegoScreen> {
               height: height,
               width: width,
               pokemones: snapshot.data.pokemon,
+              count: count,
             );
           }
         },
@@ -55,10 +55,12 @@ class Game extends StatelessWidget {
       {Key? key,
       required this.height,
       required this.width,
+      required this.count,
       required this.pokemones})
       : super(key: key);
 
   final List<Pokemon> pokemones;
+  final int count;
   final double height;
   final double width;
 
@@ -87,9 +89,9 @@ class Game extends StatelessWidget {
     var img = pokemones[pokeRandom[orden[ordenimg]]].img;
     var nameimg = pokemones[pokeRandom[orden[ordenimg]]].name;
     var name = pokemones[pokeRandom[orden[0]]].name;
-    var name2 = pokemones[pokeRandom[orden[1]]].name;
-    var name3 = pokemones[pokeRandom[orden[2]]].name;
-    var name4 = pokemones[pokeRandom[orden[3]]].name;
+    var name2 = pokemones[pokeRandom[orden[2]]].name;
+    var name3 = pokemones[pokeRandom[orden[3]]].name;
+    var name4 = pokemones[pokeRandom[orden[1]]].name;
     print(pokeRandom);
     print(orden);
     print(img + "    " + nameimg);
@@ -98,12 +100,40 @@ class Game extends StatelessWidget {
       children: [
         imgFondo(height: height),
         bordes(width: width, height: height),
-        titulo(),
-        imagenPokemon(height: height, width: width, img: img),
-        namepokemon(height: height, width: width, name: name),
-        namepokemon2(height: height, width: width, name2: name2),
-        namepokemon3(height: height, width: width, name3: name3),
-        namepokemon4(height: height, width: width, name4: name4),
+        const titulo(),
+        imagenPokemon(height: height, width: width, count: count, img: img),
+        namepokemon(
+          height: height,
+          width: width,
+          count: count,
+          name: name,
+          img: img,
+          nameimg: nameimg,
+        ),
+        namepokemon2(
+          height: height,
+          width: width,
+          count: count,
+          name2: name2,
+          img: img,
+          nameimg: nameimg,
+        ),
+        namepokemon3(
+          height: height,
+          width: width,
+          count: count,
+          name3: name3,
+          img: img,
+          nameimg: nameimg,
+        ),
+        namepokemon4(
+          height: height,
+          width: width,
+          count: count,
+          name4: name4,
+          img: img,
+          nameimg: nameimg,
+        ),
       ],
     );
   }

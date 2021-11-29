@@ -1,17 +1,24 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class namepokemon4 extends StatelessWidget {
   const namepokemon4({
     Key? key,
     required this.height,
     required this.width,
+    required this.count,
     required this.name4,
+    required this.nameimg,
+    required this.img,
   }) : super(key: key);
 
+  final int count;
   final double height;
   final double width;
   final String name4;
+  final String nameimg;
+  final String img;
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +40,16 @@ class namepokemon4 extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
-              //Get.toNamed("/pokedex");
-              //Get.toNamed("/juego");
+              int puntos = 0;
+              if (nameimg == name4) {
+                puntos = 1;
+              }
+              Get.toNamed("/preview", arguments: {
+                'count': count,
+                'puntos': puntos,
+                'img': img,
+                'nameimg': nameimg
+              });
             },
             child: Text(
               name4,
@@ -54,12 +69,18 @@ class namepokemon3 extends StatelessWidget {
     Key? key,
     required this.height,
     required this.width,
+    required this.count,
     required this.name3,
+    required this.nameimg,
+    required this.img,
   }) : super(key: key);
 
+  final int count;
   final double height;
   final double width;
   final String name3;
+  final String nameimg;
+  final String img;
 
   @override
   Widget build(BuildContext context) {
@@ -81,8 +102,16 @@ class namepokemon3 extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
-              //Get.toNamed("/pokedex");
-              //Get.toNamed("/juego");
+              int puntos = 0;
+              if (nameimg == name3) {
+                puntos = 1;
+              }
+              Get.toNamed("/preview", arguments: {
+                'count': count,
+                'puntos': puntos,
+                'img': img,
+                'nameimg': nameimg
+              });
             },
             child: Text(
               name3,
@@ -102,12 +131,18 @@ class namepokemon2 extends StatelessWidget {
     Key? key,
     required this.height,
     required this.width,
+    required this.count,
     required this.name2,
+    required this.nameimg,
+    required this.img,
   }) : super(key: key);
 
+  final int count;
   final double height;
   final double width;
   final String name2;
+  final String nameimg;
+  final String img;
 
   @override
   Widget build(BuildContext context) {
@@ -129,8 +164,16 @@ class namepokemon2 extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
-              //Get.toNamed("/pokedex");
-              //Get.toNamed("/juego");
+              int puntos = 0;
+              if (nameimg == name2) {
+                puntos = 1;
+              }
+              Get.toNamed("/preview", arguments: {
+                'count': count,
+                'puntos': puntos,
+                'img': img,
+                'nameimg': nameimg
+              });
             },
             child: Text(
               name2,
@@ -150,12 +193,18 @@ class namepokemon extends StatelessWidget {
     Key? key,
     required this.height,
     required this.width,
+    required this.count,
     required this.name,
+    required this.nameimg,
+    required this.img,
   }) : super(key: key);
 
+  final int count;
   final double height;
   final double width;
   final String name;
+  final String nameimg;
+  final String img;
 
   @override
   Widget build(BuildContext context) {
@@ -177,8 +226,16 @@ class namepokemon extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
-              //Get.toNamed("/pokedex");
-              //Get.toNamed("/juego");
+              int puntos = 0;
+              if (nameimg == name) {
+                puntos = 1;
+              }
+              Get.toNamed("/preview", arguments: {
+                'count': count,
+                'puntos': puntos,
+                'img': img,
+                'nameimg': nameimg
+              });
             },
             child: Text(
               name,
@@ -198,12 +255,14 @@ class imagenPokemon extends StatelessWidget {
     Key? key,
     required this.height,
     required this.width,
+    required this.count,
     required this.img,
   }) : super(key: key);
 
   final double height;
   final double width;
   final String img;
+  final int count;
 
   @override
   Widget build(BuildContext context) {
