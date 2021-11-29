@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:html';
 import 'dart:math';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
@@ -28,6 +27,8 @@ class _JuegoScreenState extends State<JuegoScreen> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+    int count = Get.arguments['count'];
+
     return Scaffold(
       backgroundColor: Colors.redAccent,
       body: FutureBuilder(
