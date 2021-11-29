@@ -1,13 +1,2 @@
-2021/11/15-20:08:59.770 3f60 Recovering log #13
-2021/11/15-20:08:59.801 3f60 Delete type=0 #3
-2021/11/15-20:08:59.801 3f60 Delete type=0 #5
-2021/11/15-20:08:59.801 3f60 Delete type=0 #7
-2021/11/15-20:08:59.801 3f60 Delete type=0 #9
-2021/11/15-20:08:59.801 3f60 Delete type=0 #11
-2021/11/15-20:08:59.801 3f60 Delete type=0 #13
-2021/11/15-20:08:59.801 3f60 Delete type=3 #2
-2021/11/15-20:08:59.801 3f60 Delete type=3 #4
-2021/11/15-20:08:59.801 3f60 Delete type=3 #6
-2021/11/15-20:08:59.801 3f60 Delete type=3 #8
-2021/11/15-20:08:59.801 3f60 Delete type=3 #10
-2021/11/15-20:08:59.801 3f60 Delete type=3 #12
+2021/11/28-19:18:47.119 443c Creating DB C:\Users\IGNITER\AppData\Local\Temp\flutter_tools.bd586105\flutter_tools_chrome_device.4e52a924\Default\data_reduction_proxy_leveldb since it was missing.
+2021/11/28-19:18:47.419 443c Delete type=3 #1
