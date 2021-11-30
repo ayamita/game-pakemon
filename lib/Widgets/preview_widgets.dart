@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class fondo extends StatelessWidget {
   const fondo({
@@ -139,10 +140,14 @@ class btnSigiente extends StatelessWidget {
     Key? key,
     required this.height,
     required this.width,
+    required this.puntaje,
+    required this.count,
   }) : super(key: key);
 
   final double height;
   final double width;
+  final int puntaje;
+  final int count;
 
   @override
   Widget build(BuildContext context) {
@@ -164,16 +169,10 @@ class btnSigiente extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
-              /*int puntos = 0;
-      if (nameimg == name3) {
-        puntos = 1;
-      }
-      Get.toNamed("/preview", arguments: {
-        'count': count,
-        'puntos': puntos,
-        'img': img,
-        'nameimg': nameimg
-      });*/
+              Get.toNamed("/juego", arguments: {
+                'puntaje': puntaje,
+                'count': count,
+              });
             },
             child: Text(
               "Siguiente",

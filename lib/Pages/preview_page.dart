@@ -17,23 +17,26 @@ class _PreviewScreenState extends State<PreviewScreen> {
     var height = MediaQuery.of(context).size.height;
     int puntos = Get.arguments['puntos'];
     String img = Get.arguments['img'];
+    int puntaje = Get.arguments['puntaje'];
     String nameimg = Get.arguments['nameimg'];
     String signo;
     int count;
     if (puntos == 1) {
       signo = "+";
-      count = Get.arguments['count'] + 1;
     } else {
       signo = "";
-      count = Get.arguments['count'];
     }
+    count = Get.arguments['count'] + 1;
+    print("count:" + count.toString());
     return Preview(
         height: height,
         width: width,
         img: img,
         nameimg: nameimg,
         signo: signo,
-        puntos: puntos);
+        puntos: puntos,
+        puntaje: puntaje,
+        count: count);
   }
 }
 
@@ -46,6 +49,8 @@ class Preview extends StatelessWidget {
     required this.nameimg,
     required this.signo,
     required this.puntos,
+    required this.count,
+    required this.puntaje,
   }) : super(key: key);
 
   final double height;
@@ -53,7 +58,9 @@ class Preview extends StatelessWidget {
   final String img;
   final String nameimg;
   final String signo;
+  final int count;
   final int puntos;
+  final int puntaje;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +74,8 @@ class Preview extends StatelessWidget {
             txtPokemon(height: height, width: width, nameimg: nameimg),
             txtPuntos(
                 height: height, width: width, signo: signo, puntos: puntos),
-            btnSigiente(height: height, width: width)
+            btnSigiente(
+                height: height, width: width, count: count, puntaje: puntaje)
           ],
         ));
   }

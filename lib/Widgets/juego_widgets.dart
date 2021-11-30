@@ -98,17 +98,19 @@ class imagenPokemon extends StatelessWidget {
 }
 
 class namepokemon extends StatelessWidget {
-  const namepokemon({
-    Key? key,
-    required this.height,
-    required this.width,
-    required this.count,
-    required this.name,
-    required this.nameimg,
-    required this.img,
-  }) : super(key: key);
+  const namepokemon(
+      {Key? key,
+      required this.height,
+      required this.width,
+      required this.count,
+      required this.name,
+      required this.nameimg,
+      required this.img,
+      required this.puntaje})
+      : super(key: key);
 
   final int count;
+  final int puntaje;
   final double height;
   final double width;
   final String name;
@@ -136,14 +138,21 @@ class namepokemon extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
               int puntos = 0;
+              int puntajes;
+              int contador;
               if (nameimg == name) {
                 puntos = 1;
+                puntajes = (puntaje + 1);
+              } else {
+                puntajes = puntaje;
               }
+              print("puntaje:" + puntajes.toString());
               Get.toNamed("/preview", arguments: {
                 'count': count,
                 'puntos': puntos,
                 'img': img,
-                'nameimg': nameimg
+                'nameimg': nameimg,
+                'puntaje': puntajes,
               });
             },
             child: Text(
@@ -160,17 +169,19 @@ class namepokemon extends StatelessWidget {
 }
 
 class namepokemon2 extends StatelessWidget {
-  const namepokemon2({
-    Key? key,
-    required this.height,
-    required this.width,
-    required this.count,
-    required this.name2,
-    required this.nameimg,
-    required this.img,
-  }) : super(key: key);
+  const namepokemon2(
+      {Key? key,
+      required this.height,
+      required this.width,
+      required this.count,
+      required this.name2,
+      required this.nameimg,
+      required this.img,
+      required this.puntaje})
+      : super(key: key);
 
   final int count;
+  final int puntaje;
   final double height;
   final double width;
   final String name2;
@@ -198,14 +209,21 @@ class namepokemon2 extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
               int puntos = 0;
+              int puntajes;
+              int contador;
               if (nameimg == name2) {
                 puntos = 1;
+                puntajes = (puntaje + 1);
+              } else {
+                puntajes = puntaje;
               }
+              print("puntaje:" + puntajes.toString());
               Get.toNamed("/preview", arguments: {
                 'count': count,
                 'puntos': puntos,
                 'img': img,
-                'nameimg': nameimg
+                'nameimg': nameimg,
+                'puntaje': puntajes,
               });
             },
             child: Text(
@@ -230,8 +248,10 @@ class namepokemon3 extends StatelessWidget {
     required this.name3,
     required this.nameimg,
     required this.img,
+    required this.puntaje,
   }) : super(key: key);
 
+  final int puntaje;
   final int count;
   final double height;
   final double width;
@@ -260,14 +280,21 @@ class namepokemon3 extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
               int puntos = 0;
+              int puntajes;
+              int contador;
               if (nameimg == name3) {
                 puntos = 1;
+                puntajes = (puntaje + 1);
+              } else {
+                puntajes = puntaje;
               }
+              print("puntaje:" + puntajes.toString());
               Get.toNamed("/preview", arguments: {
                 'count': count,
                 'puntos': puntos,
                 'img': img,
-                'nameimg': nameimg
+                'nameimg': nameimg,
+                'puntaje': puntajes,
               });
             },
             child: Text(
@@ -292,8 +319,10 @@ class namepokemon4 extends StatelessWidget {
     required this.name4,
     required this.nameimg,
     required this.img,
+    required this.puntaje,
   }) : super(key: key);
 
+  final int puntaje;
   final int count;
   final double height;
   final double width;
@@ -322,14 +351,21 @@ class namepokemon4 extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
               int puntos = 0;
+              int puntajes;
+              int contador;
               if (nameimg == name4) {
                 puntos = 1;
+                puntajes = (puntaje + 1);
+              } else {
+                puntajes = puntaje;
               }
+              print("puntaje:" + puntajes.toString());
               Get.toNamed("/preview", arguments: {
                 'count': count,
                 'puntos': puntos,
                 'img': img,
-                'nameimg': nameimg
+                'nameimg': nameimg,
+                'puntaje': puntajes,
               });
             },
             child: Text(

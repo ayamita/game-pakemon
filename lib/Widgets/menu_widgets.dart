@@ -27,8 +27,12 @@ class btnJugar extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           onPressed: () {
             //Get.toNamed("/pokedex");
-            int count = 1;
-            Get.toNamed("/juego", arguments: {'count': count});
+            int count = 0;
+            int puntaje = 0;
+            print("count:" + count.toString());
+            print("puntaje:" + puntaje.toString());
+            Get.toNamed("/juego",
+                arguments: {'count': count, 'puntaje': puntaje});
           },
           child: const Text(
             "Jugar",

@@ -26,6 +26,7 @@ class _JuegoScreenState extends State<JuegoScreen> {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     int count = Get.arguments['count'];
+    int puntaje = Get.arguments['puntaje'];
 
     return Scaffold(
       backgroundColor: Colors.redAccent,
@@ -36,11 +37,11 @@ class _JuegoScreenState extends State<JuegoScreen> {
             return const Center(child: CircularProgressIndicator());
           } else {
             return Game(
-              height: height,
-              width: width,
-              pokemones: snapshot.data.pokemon,
-              count: count,
-            );
+                height: height,
+                width: width,
+                pokemones: snapshot.data.pokemon,
+                count: count,
+                puntaje: puntaje);
           }
         },
       ),
@@ -54,11 +55,13 @@ class Game extends StatelessWidget {
       required this.height,
       required this.width,
       required this.count,
-      required this.pokemones})
+      required this.pokemones,
+      required this.puntaje})
       : super(key: key);
 
   final List<Pokemon> pokemones;
   final int count;
+  final int puntaje;
   final double height;
   final double width;
 
@@ -101,37 +104,37 @@ class Game extends StatelessWidget {
         const titulo(),
         imagenPokemon(height: height, width: width, count: count, img: img),
         namepokemon(
-          height: height,
-          width: width,
-          count: count,
-          name: name,
-          img: img,
-          nameimg: nameimg,
-        ),
+            height: height,
+            width: width,
+            count: count,
+            name: name,
+            img: img,
+            nameimg: nameimg,
+            puntaje: puntaje),
         namepokemon2(
-          height: height,
-          width: width,
-          count: count,
-          name2: name2,
-          img: img,
-          nameimg: nameimg,
-        ),
+            height: height,
+            width: width,
+            count: count,
+            name2: name2,
+            img: img,
+            nameimg: nameimg,
+            puntaje: puntaje),
         namepokemon3(
-          height: height,
-          width: width,
-          count: count,
-          name3: name3,
-          img: img,
-          nameimg: nameimg,
-        ),
+            height: height,
+            width: width,
+            count: count,
+            name3: name3,
+            img: img,
+            nameimg: nameimg,
+            puntaje: puntaje),
         namepokemon4(
-          height: height,
-          width: width,
-          count: count,
-          name4: name4,
-          img: img,
-          nameimg: nameimg,
-        ),
+            height: height,
+            width: width,
+            count: count,
+            name4: name4,
+            img: img,
+            nameimg: nameimg,
+            puntaje: puntaje),
       ],
     );
   }
