@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:pokemon/Pages/food_page.dart';
+import 'package:pokemon/Pages/menu_page.dart';
 import 'package:pokemon/Pages/home_page.dart';
 import 'package:pokemon/Pages/juego_page.dart';
 import 'package:pokemon/Pages/login_page.dart';
@@ -15,7 +15,5 @@ routes() => [
       GetPage(name: "/preview", page: () => PreviewScreen()),
       GetPage(name: "/juego", page: () => JuegoScreen()),
       GetPage(
-          name: "/foodpage",
-          page: () => FoodPage(),
-          transition: Transition.zoom),
+          name: "/menu", page: () => MenuPage(), transition: Transition.zoom),
     ];

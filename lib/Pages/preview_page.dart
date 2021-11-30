@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pokemon/Widgets/preview_widgets.dart';
 
 class PreviewScreen extends StatefulWidget {
   PreviewScreen({Key? key}) : super(key: key);
@@ -26,59 +27,47 @@ class _PreviewScreenState extends State<PreviewScreen> {
       signo = "";
       count = Get.arguments['count'];
     }
+    return Preview(
+        height: height,
+        width: width,
+        img: img,
+        nameimg: nameimg,
+        signo: signo,
+        puntos: puntos);
+  }
+}
+
+class Preview extends StatelessWidget {
+  const Preview({
+    Key? key,
+    required this.height,
+    required this.width,
+    required this.img,
+    required this.nameimg,
+    required this.signo,
+    required this.puntos,
+  }) : super(key: key);
+
+  final double height;
+  final double width;
+  final String img;
+  final String nameimg;
+  final String signo;
+  final int puntos;
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.redAccent,
         body: Stack(
           children: [
-            Positioned(
-              top: height * 0.18,
-              right: -30,
-              child: Image.asset('images/pokefondow.png',
-                  height: 200, fit: BoxFit.fitHeight),
-            ),
-            Positioned(
-              bottom: 0,
-              width: width,
-              child: Container(
-                  width: width,
-                  height: height * 0.6,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20)),
-                      color: Colors.white)),
-            ),
-            Positioned(
-              top: (height * 0.18),
-              left: (width / 2) - 100,
-              child: CachedNetworkImage(
-                imageUrl: img,
-                height: 200,
-                fit: BoxFit.fitHeight,
-              ),
-            ),
-            Positioned(
-                top: (height * 0.48),
-                //right: (width / 2) - 80,
-                child: Text(
-                  "Es " + nameimg + "!",
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 32,
-                  ),
-                )),
-            Positioned(
-                top: (height * 0.55),
-                right: (width / 2) - 20,
-                child: Text(
-                  signo + puntos.toString() + "pts",
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 32,
-                  ),
-                ))
+            fondo(height: height),
+            borde(width: width, height: height),
+            txtImgPokemon(height: height, width: width, img: img),
+            txtPokemon(height: height, width: width, nameimg: nameimg),
+            txtPuntos(
+                height: height, width: width, signo: signo, puntos: puntos),
+            btnSigiente(height: height, width: width)
           ],
         ));
   }

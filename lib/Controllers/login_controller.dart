@@ -24,7 +24,7 @@ class LoginController extends GetxController {
       Future.delayed(
         Duration(seconds: 2),
         () {
-          Get.toNamed("/foodpage");
+          Get.toNamed("/menu");
         },
       );
     } catch (e) {
@@ -71,7 +71,7 @@ class LoginController extends GetxController {
       Future.delayed(
         Duration(seconds: 2),
         () {
-          Get.toNamed("/foodpage");
+          Get.toNamed("/menu");
         },
       );
     } catch (e) {

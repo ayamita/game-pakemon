@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/button_builder.dart';
-import 'package:get/get.dart';
+import 'package:pokemon/Widgets/home_widgets.dart';
 
 class HomPage extends StatefulWidget {
   @override
@@ -8,6 +7,17 @@ class HomPage extends StatefulWidget {
 }
 
 class _HomPageState extends State<HomPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Home();
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,48 +39,14 @@ class _HomPageState extends State<HomPage> {
             child: Center(
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(
+                  children: const [
+                    SizedBox(
                       height: 100,
                     ),
-                    Container(
-                      child: const Text(
-                        '¿Quién es ese Pokemón?',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 28,
-                            color: Color(0xFFFBC02D)),
-                      ),
-                      alignment: Alignment.center,
-                    ),
-                    Container(
-                      child: Center(
-                          child: Image.asset(
-                        'images/logo.png',
-                        height: 350.00,
-                        width: 350.00,
-                      )),
-                    ),
-                    Container(
-                      child: SignInButtonBuilder(
-                        icon: Icons.person_add,
-                        backgroundColor: Colors.blueAccent,
-                        text: 'Registrar',
-                        onPressed: () => Get.toNamed("/registro"),
-                      ),
-                      padding: const EdgeInsets.all(16),
-                      alignment: Alignment.center,
-                    ),
-                    Container(
-                      child: SignInButtonBuilder(
-                        icon: Icons.verified_user,
-                        backgroundColor: Colors.orange,
-                        text: 'Iniciar Sessión',
-                        onPressed: () => Get.toNamed("/loginpage"),
-                      ),
-                      padding: const EdgeInsets.all(16),
-                      alignment: Alignment.center,
-                    )
+                    titulo(),
+                    imgPokemon(),
+                    btnRegistrar(),
+                    btnGoogle()
                   ]),
             )));
   }
