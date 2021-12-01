@@ -34,7 +34,7 @@ class menu extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Color(0xFFB71C1C),
+          backgroundColor: Colors.red[900],
           actions: <Widget>[
             Builder(builder: (BuildContext context) {
               return FlatButton(

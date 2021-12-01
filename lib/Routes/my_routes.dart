@@ -6,6 +6,7 @@ import 'package:pokemon/Pages/login_page.dart';
 import 'package:pokemon/Pages/pokedex_page.dart';
 import 'package:pokemon/Pages/preview_page.dart';
 import 'package:pokemon/Pages/register_login_page.dart';
+import 'package:pokemon/Pages/resultado_page.dart';
 
 routes() => [
       GetPage(name: "/home", page: () => HomPage()),
@@ -14,6 +15,7 @@ routes() => [
       GetPage(name: "/pokedex", page: () => PokedexPage()),
       GetPage(name: "/preview", page: () => PreviewScreen()),
       GetPage(name: "/juego", page: () => JuegoScreen()),
+      GetPage(name: "/resultado", page: () => ResultadoPage()),
       GetPage(
           name: "/menu", page: () => MenuPage(), transition: Transition.zoom),
     ];

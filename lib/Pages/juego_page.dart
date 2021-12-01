@@ -29,7 +29,7 @@ class _JuegoScreenState extends State<JuegoScreen> {
     int puntaje = Get.arguments['puntaje'];
 
     return Scaffold(
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.red[900],
       body: FutureBuilder(
         future: getPokemones(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {

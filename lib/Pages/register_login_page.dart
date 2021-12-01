@@ -15,7 +15,7 @@ class _RegisterLoginPageState extends State<RegisterLoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFFB71C1C),
+          backgroundColor: Colors.red[900],
         ),
         body: registrar(controller: controller));
   }

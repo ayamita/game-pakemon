@@ -169,19 +169,26 @@ class btnSigiente extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
             onPressed: () {
-              Get.toNamed("/juego", arguments: {
-                'puntaje': puntaje,
-                'count': count,
-              });
+              if (count == 10) {
+                Get.toNamed("/resultado", arguments: {
+                  'puntaje': puntaje,
+                  'count': count,
+                });
+              } else {
+                Get.toNamed("/juego", arguments: {
+                  'puntaje': puntaje,
+                  'count': count,
+                });
+              }
             },
-            child: Text(
+            child: const Text(
               "Siguiente",
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 24,
                 color: Colors.white,
               ),
             ),
-            color: Colors.redAccent,
+            color: Colors.red[900],
           )),
     );
   }

@@ -15,10 +15,10 @@ class _PreviewScreenState extends State<PreviewScreen> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    int puntos = Get.arguments['puntos'];
-    String img = Get.arguments['img'];
-    int puntaje = Get.arguments['puntaje'];
-    String nameimg = Get.arguments['nameimg'];
+    late int puntos = Get.arguments['puntos'];
+    late String img = Get.arguments['img'];
+    late int puntaje = Get.arguments['puntaje'];
+    late String nameimg = Get.arguments['nameimg'];
     String signo;
     int count;
     if (puntos == 1) {
@@ -65,7 +65,7 @@ class Preview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.red[900],
         body: Stack(
           children: [
             fondo(height: height),

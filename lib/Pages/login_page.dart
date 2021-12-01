@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return (Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFFB71C1C),
+          backgroundColor: Colors.red[900],
         ),
         body: Login(productKey: _productKey, controller: controller)));
   }

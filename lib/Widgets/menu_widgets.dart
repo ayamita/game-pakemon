@@ -147,7 +147,9 @@ class btnComentarios extends StatelessWidget {
           minWidth: 340,
           shape: RoundedRectangleBorder(
               borderRadius: new BorderRadius.circular(12)),
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed("/resultado", arguments: {'count': 10, 'puntaje': 7});
+          },
           child: const Text(
             "Comentarios",
             style: TextStyle(

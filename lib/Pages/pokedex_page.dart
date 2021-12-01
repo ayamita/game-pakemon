@@ -40,6 +40,7 @@ class _PokedexPageState extends State<PokedexPage> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+    var colorbutton = Colors.red[900];
     return Scaffold(
       body: Stack(children: [
         Positioned(
@@ -80,7 +81,7 @@ class _PokedexPageState extends State<PokedexPage> {
                                 vertical: 8.0, horizontal: 12),
                             child: Container(
                               decoration: const BoxDecoration(
-                                  color: Colors.redAccent,
+                                  color: Color(0xFFB71C1C),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20))),
                               child: Stack(

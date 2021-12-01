@@ -162,7 +162,7 @@ class namepokemon extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            color: Colors.redAccent,
+            color: Colors.red[900],
           )),
     );
   }
@@ -233,7 +233,7 @@ class namepokemon2 extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            color: Colors.redAccent,
+            color: Colors.red[900],
           )),
     );
   }
@@ -304,7 +304,7 @@ class namepokemon3 extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            color: Colors.redAccent,
+            color: Colors.red[900],
           )),
     );
   }
@@ -375,7 +375,7 @@ class namepokemon4 extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            color: Colors.redAccent,
+            color: Colors.red[900],
           )),
     );
   }
